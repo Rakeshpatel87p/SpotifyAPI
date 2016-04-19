@@ -1,0 +1,39 @@
+body {
+	text-align:center;
+	background-color:orange;
+	font-family: 'Lato', sans-serif;
+
+
+}
+
+.button {
+	margin:4%;
+}
+
+.title{
+	border:1px solid black;
+	border-radius:2em;
+	box-shadow: 10px 10px 5px #888888;
+	padding:2%;
+	margin:0 0 5% 22%;
+	width:50%;
+	background: white;
+	font-family: 'IM Fell English', serif;
+}
+
+#query {
+	padding:1%;
+	border-radius:2em;
+	text-align:center;
+	font-size:15px;
+}
+
+.artistName {
+	text-decoration: underline;
+}
+
+.bottom {
+	margin-top:15%;
+	background-color:red;
+	border:1px solid black;
+}
