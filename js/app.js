@@ -28,7 +28,7 @@ var findTopTracks = function(artistId) {
             $('.artistName').text(data.tracks.name);
             $.each(data.tracks, function(i, item) {
                 var finalResults = appendResults(item);
-                $('.results').append(finalResults);               
+                $('.results-container').append(finalResults);               
 
             });
         }
@@ -37,18 +37,18 @@ var findTopTracks = function(artistId) {
 
 var appendResults = function(item) {
     
-    var allMaterial = $('.results').clone;
+    var allMaterial = $('.results-template').clone;
 
-    var songElem = $('.results').find('.name');
+    var songElem = $('.results-template').find('.name');
     songElem.text('Song Name: ' + item.name);
 
-    var popElem = $('.results').find('.popularity');
+    var popElem = $('.results-template').find('.popularity');
     popElem.text('Popularity Score: ' + item.popularity);
 
-    var linkElem = $('.results').find('.linkToSong');
+    var linkElem = $('.results-template').find('.linkToSong');
     linkElem.attr('href', item.preview_url);
 
-    var imageElem=$('.results').find('.artistimage')
+    var imageElem=$('.results-template').find('.artistimage')
     imageElem.attr('src', item.album.images[0].url);
 
     return allMaterial;
